@@ -1,6 +1,6 @@
 # SpringMvcGetImageInDirectory
 get image in directory with spring mvc
-To run project with gradle
+#####To run project with gradle
 ```
 gradle bootrun
 ```
