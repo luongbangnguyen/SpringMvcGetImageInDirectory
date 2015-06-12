@@ -22,13 +22,11 @@ public class ImageController {
 			HttpServletResponse response) throws IOException {
 		if(StringUtils.isBlank(pathImage)){
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
-			return null;
 		}
 		
 		ResponseEntity<byte[]> responseEntity = imageSv.getResponseImage(pathImage);
 		if(responseEntity == null){
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
-			return null;
 		}
 		return responseEntity;
 	}
