@@ -4,7 +4,7 @@ get image in directory with spring mvc
 ```
 gradle bootrun
 ```
-Controller
+#####Controller
 ```
 @RequestMapping("/image/{pathImage:.*}")
 	public ResponseEntity<byte[]> testphoto(@PathVariable String pathImage,
@@ -22,7 +22,7 @@ Controller
 		return responseEntity;
 	}
 ```
-In service implement
+#####In service implement
 ```
 @Override
 	public ResponseEntity<byte[]> getResponseImage(String urlImage) throws IOException {
@@ -43,3 +43,4 @@ In service implement
 	    return new ResponseEntity<byte[]>(data, HttpStatus.OK);
 	}
 ```
+#####_url exaple : http://localhost:8080/image/test.img_
